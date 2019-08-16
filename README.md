@@ -24,7 +24,7 @@ An Angular and [**Nest**](https://github.com/nestjs/nest) starter app that uses 
 - **Note**: To deploy your static site to a static hosting platform you will have to deploy the `dist/browser`
   folder, rather than the usual `dist`
 
-  ## Getting Started
+### Getting Started
 
 For help with Angular Universal, you can follow this guide [Angular-CLI Wiki guide](https://github.com/angular/angular-cli/wiki/stories-universal-rendering) or go to this repo [angular/universal](https://github.com/angular/universal).
 
