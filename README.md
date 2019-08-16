@@ -2,28 +2,6 @@
 
 An Angular and [**Nest**](https://github.com/nestjs/nest) starter app that uses Angular Universal for SSR.
 
-## Getting Started
-
-For help with Angular Universal, you can follow this guide [Angular-CLI Wiki guide](https://github.com/angular/angular-cli/wiki/stories-universal-rendering) or go to this repo [angular/universal](https://github.com/angular/universal).
-
----
-
-### Build Time Prerendering Vs. Server Side Rendering(ssr)
-
-This repo demonstrates the use of 2 different forms of Server Side Rendering.
-
-**Prerender**
-
-- Happens at build time
-- Renders your application and replaces the dist index.html with a version rendered at the route `/`.
-
-**Server-Side Rendering(ssr)**
-
-- Happens at runtime
-- Uses `ngExpressEngine` to render your application on the fly at the requested url.
-
----
-
 ### Installation
 
 - `npm install`
@@ -45,6 +23,28 @@ This repo demonstrates the use of 2 different forms of Server Side Rendering.
   applications files, spinning up a demo http-server so you can view it on `http://localhost:8080`
 - **Note**: To deploy your static site to a static hosting platform you will have to deploy the `dist/browser`
   folder, rather than the usual `dist`
+
+  ## Getting Started
+
+For help with Angular Universal, you can follow this guide [Angular-CLI Wiki guide](https://github.com/angular/angular-cli/wiki/stories-universal-rendering) or go to this repo [angular/universal](https://github.com/angular/universal).
+
+---
+
+### Build Time Prerendering Vs. Server Side Rendering(ssr)
+
+This repo demonstrates the use of 2 different forms of Server Side Rendering.
+
+**Prerender**
+
+- Happens at build time
+- Renders your application and replaces the dist index.html with a version rendered at the route `/`.
+
+**Server-Side Rendering(ssr)**
+
+- Happens at runtime
+- Uses `ngExpressEngine` to render your application on the fly at the requested url.
+
+---
 
 # License
 
