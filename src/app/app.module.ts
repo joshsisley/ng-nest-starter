@@ -1,12 +1,11 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { DragulaModule } from 'ng2-dragula';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { SharedModule } from './modules/shared/shared.module';
+import { SharedModule } from './shared/shared.module';
 import { WindowService } from './services/window/window.service';
 
 // For AoT compilation:
@@ -15,7 +14,7 @@ export function getWindow() {
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent],
   imports: [
     HttpClientModule,
     DragulaModule.forRoot(),
@@ -24,25 +23,15 @@ export function getWindow() {
     // the page.
     BrowserModule.withServerTransition({ appId: 'my-app' }),
     TransferHttpCacheModule,
-
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      {
-        path: 'speakers',
-        loadChildren: () =>
-          import('./modules/speakers/speakers.module').then(
-            m => m.SpeakersModule,
-          ),
-      },
-    ]),
-    SharedModule,
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [
     {
       provide: WindowService,
-      useFactory: getWindow,
-    },
+      useFactory: getWindow
+    }
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
