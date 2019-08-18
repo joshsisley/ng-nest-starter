@@ -1,1 +1,5 @@
-<p>todo-list works!</p>
+<mat-selection-list #shoes>
+  <mat-list-option *ngFor="let todo of todosList">
+    {{ todo }}
+  </mat-list-option>
+</mat-selection-list>

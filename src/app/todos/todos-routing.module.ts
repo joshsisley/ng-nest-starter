@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodosComponent } from './todos/todos.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: TodoListComponent
+    component: TodosComponent
   }
 ];
 
@@ -16,4 +17,4 @@ const routes: Routes = [
 })
 export class TodosRoutingModule {}
 
-export const routedComponents = [TodoListComponent];
+export const routedComponents = [TodosComponent, TodoListComponent];
