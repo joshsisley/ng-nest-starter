@@ -6,7 +6,7 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 import { DragulaModule } from 'ng2-dragula';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { WindowService } from './services/window/window.service';
+import { WindowService } from './core/window/window.service';
 
 // For AoT compilation:
 export function getWindow() {

@@ -9,7 +9,7 @@ import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UniversalInterceptorService } from './shared/interceptors/universal-interceptor.service';
-import { WindowService } from './services/window/window.service';
+import { WindowService } from './core/window/window.service';
 
 @NgModule({
   imports: [
