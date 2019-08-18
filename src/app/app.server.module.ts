@@ -1,11 +1,14 @@
-import {NgModule} from '@angular/core';
-import {ServerModule, ServerTransferStateModule} from '@angular/platform-server';
-import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
+import { NgModule } from '@angular/core';
+import {
+  ServerModule,
+  ServerTransferStateModule
+} from '@angular/platform-server';
+import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 
-import {AppModule} from './app.module';
-import {AppComponent} from './app.component';
+import { AppModule } from './app.module';
+import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { UniversalInterceptorService } from './modules/shared/interceptors/universal-interceptor.service';
+import { UniversalInterceptorService } from './shared/interceptors/universal-interceptor.service';
 import { WindowService } from './services/window/window.service';
 
 @NgModule({
